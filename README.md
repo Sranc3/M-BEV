@@ -15,7 +15,7 @@ This implementation is built upon [detr3d](https://github.com/WangYueFt/detr3d/b
 Follow the mmdet3d to process the nuScenes dataset (https://github.com/open-mmlab/mmdetection3d/blob/master/docs/en/data_preparation.md).
 
 * Segmentation Data  
-Download Map expansion from nuScenes dataset (https://www.nuscenes.org/nuscenes#download)
+Download Map expansion from nuScenes dataset (https://www.nuscenes.org/nuscenes#download).
 
-* Ckpts
-To verify the performance on the val set, we provide normally trained petrv2 and petrv2 trained with M-BEV[weights](https://pan.baidu.com/s/10J98exFM1nozD8cUh7zuTQ) for comparsion, 
+* Ckpts 
+To verify the performance on the val set, we provide normally trained petrv2 and petrv2 trained with M-BEV [weights](https://pan.baidu.com/s/10J98exFM1nozD8cUh7zuTQ) for comparsion, the code is wpg1.
