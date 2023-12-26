@@ -1,4 +1,4 @@
-# M-BEV
+# M-BEV: Masked BEV Perception for Robust Autonomous Driving （AAAI 2024）
 ### Demo for M-BEV ###
 This is the implementation for the paper M-BEV: Masked BEV Perception for Robust Autonomous Driving.
 
