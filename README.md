@@ -26,6 +26,9 @@ You can download the ckpts and put the models in the ckpts folder, then modify t
 ```bash
 tools/dist_test.sh projects/configs/petrv2/petrv2_vovnet_gridmask_mbev_p4_800x320.py /ckpts/mebv.pth 8 --eval bbox
 ```
+```bash
+tools/dist_test.sh projects/configs/petrv2/petrv2_vovnet_gridmask_p4_800x320.py /ckpts/petrv2.pth 8 --eval bbox
+```
 
 ## Acknowledgement
 Many thanks to the authors of [mmdetection3d](https://github.com/open-mmlab/mmdetection3d), [detr3d](https://github.com/WangYueFt/detr3d) and [petr](https://github.com/megvii-research/PETR).
