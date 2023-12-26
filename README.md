@@ -19,3 +19,13 @@ Download Map expansion from nuScenes dataset (https://www.nuscenes.org/nuscenes#
 
 * Ckpts 
 To verify the performance on the val set, we provide normally trained petrv2 and petrv2 trained with M-BEV [weights](https://pan.baidu.com/s/10J98exFM1nozD8cUh7zuTQ) for comparsion, the code is wpg1.
+
+
+## Fast inference
+You can download the ckpts and put the models in the ckpts folder, then modify the config file according to your environment
+```bash
+tools/dist_test.sh projects/configs/petrv2/petrv2_vovnet_gridmask_mbev_p4_800x320.py /ckpts/mebv.pth 8 --eval bbox
+```
+
+## Acknowledgement
+Many thanks to the authors of [mmdetection3d](https://github.com/open-mmlab/mmdetection3d), [detr3d](https://github.com/WangYueFt/detr3d) and [petr](https://github.com/megvii-research/PETR).
