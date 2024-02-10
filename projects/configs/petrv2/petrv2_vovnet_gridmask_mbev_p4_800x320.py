@@ -50,8 +50,8 @@ model = dict(
         with_fpe=True,
         with_time=True,
         with_multi=True,
-        mvr=True,
-        mask_num=1,
+        mvr=True,   
+        mask_num=1,  
         position_range=[-61.2, -61.2, -10.0, 61.2, 61.2, 10.0],
         code_weights = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
         transformer=dict(
@@ -111,7 +111,7 @@ model = dict(
             pc_range=point_cloud_range))))
 
 dataset_type = 'CustomNuScenesDataset'
-data_root = '/data1/nuScenes/'
+data_root = '/data1/nuScenes/'  ### your dataset root
 
 file_client_args = dict(backend='disk')
 
@@ -228,7 +228,7 @@ optimizer = dict(
     lr=2.00e-4,
     paramwise_cfg=dict(
         custom_keys={
-            'img_backbone': dict(lr_mult=0.1),   #### 这个参数是啥意思？
+            'img_backbone': dict(lr_mult=0.1),   
         }),
     weight_decay=0.01)
 
@@ -247,7 +247,8 @@ evaluation = dict(interval=24, pipeline=test_pipeline)
 find_unused_parameters=False #### when use checkpoint, find_unused_parameters must be False
 checkpoint_config = dict(interval=1, max_keep_ckpts=1)
 runner = dict(type='EpochBasedRunner', max_epochs=total_epochs)
-load_from='ckpts/fcos3d_vovnet_imgbackbone-remapped.pth'
+#load_from='ckpts/fcos3d_vovnet_imgbackbone-remapped.pth'   ### for normal training
+load_from='ckpts/petrv2.pth'  ### for finetuning
 resume_from=None
 
 # mAP: 0.4104
