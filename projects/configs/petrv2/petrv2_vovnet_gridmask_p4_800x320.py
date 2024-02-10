@@ -228,7 +228,7 @@ optimizer = dict(
     lr=2.00e-4,
     paramwise_cfg=dict(
         custom_keys={
-            'img_backbone': dict(lr_mult=0.1),   #### 这个参数是啥意思？
+            'img_backbone': dict(lr_mult=0.1),  
         }),
     weight_decay=0.01)
 
