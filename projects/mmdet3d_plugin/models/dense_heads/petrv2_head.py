@@ -602,10 +602,13 @@ class PETRv2Head(AnchorFreeHead):
         if self.mvr:
             import time
             #time_start = time.time()
+            
+            mask_ratio=76
+            overlap = (100-mask_ratio)/4
             patches = x.permute(1,3,4,0,2).reshape(n, h*w, c)
-            left_index = torch.cat([torch.arange(0,10)+_*50 for _ in range(20)]).type(torch.long)
-            right_index = torch.cat([torch.arange(40,50)+_*50 for _ in range(20)]).type(torch.long)
-            mid_index = torch.cat([torch.arange(10,40)+ _*50 for _ in range(20)]).type(torch.long)
+            left_index = torch.cat([torch.arange(0,overlap)+_*50 for _ in range(20)]).type(torch.long)
+            right_index = torch.cat([torch.arange(50-overlap,50)+_*50 for _ in range(20)]).type(torch.long)
+            mid_index = torch.cat([torch.arange(overlap,50-overlap)+ _*50 for _ in range(20)]).type(torch.long)
             x_ref_token = torch.zeros((2,h*w,256),device=x.device)
             a = self.a
           
